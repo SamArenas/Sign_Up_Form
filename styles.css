@@ -1,0 +1,143 @@
+@font-face {
+    font-family: heroFont;
+    src: url(font/hero_font.otf)
+  }
+
+
+:root {
+    --width-left-side: 40vw;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+
+}
+
+.container {
+    display: flex;
+    height: max(100vh, 750px);
+    width: 100vw;
+
+}
+
+.left-side {
+    width:var(--width-left-side);
+    background-image: url(images/motorcycle.jpg);
+    background-size: cover;
+    min-width: 300px;
+}
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: calc(100vw - var(--width-left-side));
+    min-width: 750px;
+
+}
+
+.form-container {
+    display: flex;
+    flex: row;
+    position: relative;
+    right: 40px;
+    justify-content: center;
+    box-shadow: 4px 3px 28px -7px rgba(0, 0, 0, 0.45);
+    padding: 2em;
+    background-color: white;
+}
+
+.right-side>p,
+.fields {
+    width: 80%;
+}
+
+.user-inputs {
+    display: flex;
+    flex-wrap: wrap;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+.user-inputs div {
+    display: flex;
+    flex-direction: column;
+    width: calc((100vw - var(--width-left-side))/3);
+    min-width: 200px;
+}
+.user-inputs input:focus{
+    border-color:#FF4742 ;
+    outline: none;
+}
+
+.legend-header {
+    color: #FF4742;
+    font-size: 4em;
+    font-family: heroFont;
+    font-weight:bold;
+    letter-spacing: 5px;
+    text-shadow: rgba(0, 0, 0, 0.2) 5px 3px 4px;
+}
+.hero-text{
+    line-height: 1.3em;
+    font-size: 1.3em;
+    text-align: justify;
+}
+.logo-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: relative;
+    top: 25vh;
+    font-size: 2.5em;
+    color: white;
+    font-family: heroFont;
+}
+.logo-bar img{
+    width: max(--width-left-side,200px);
+    height: max(10vh,120px);
+}
+
+
+button{
+  background: #FF4742;
+  border: 1px solid #FF4742;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 12px 14px;
+}
+
+button:hover,
+button:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #FF4742;
+}
+
+button:active {
+  opacity: .5;
+}
+
+.log-in{
+    color: #FF4742;
+    cursor: pointer;
+}
+.log-in:hover{
+    cursor: pointer;
+}
